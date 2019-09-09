@@ -10,6 +10,7 @@ async def fetch_meme(message):
     async with session.get(url) as resp:
       meme_data = await resp.json()
       meme_url = meme_data['url']
+      print('Sending meme:', meme_data['id'])
     async with session.get(meme_url) as resp:
       buffer = BytesIO(await resp.read())
   return buffer
