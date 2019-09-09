@@ -27,7 +27,7 @@ async def fetch_imdb(imdb_id):
       return soup.find('h1')
 
 def rand_intro():
-  intros = ['*pops out of a trash can*', '*walks out behind a car*', '*sets down silver play button*', '*calls in from florida penitentiary*', '*turns off lawn mower*', '*snorts giant line of PCP*']
+  intros = ['*pops out of a trash can*', '*walks out behind a car*', '*sets down silver play button*', '*calls in from florida penitentiary*', '*turns off lawn mower*', '*snorts line of PCP*', '*dabs*', '*snorts line of adderall*', '*sits behind table*']
   return random.choice(intros)
 
 def rand_leonflix_comment():
