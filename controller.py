@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import random
 
 
-async def fetch_meme(message):
+async def fetch_meme():
   url = 'https://leonflix.pythonanywhere.com/memes/random'
   async with aiohttp.ClientSession() as session:
     async with session.get(url) as resp:

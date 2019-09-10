@@ -15,7 +15,7 @@ async def on_message(message):
     msg = 'Hello {.author}!'.format(message)
     await message.channel.send(msg)
   elif '!meme' in message.content:
-    buffer = await controller.fetch_meme(message)
+    buffer = await controller.fetch_meme()
     await message.channel.send(content="Hello I hope everybody is doing great", file=discord.File(fp=buffer, filename='meme.png'))
   elif 'leonflix' in message.content.lower():
     await message.channel.send('%s\n%s' % (controller.rand_intro(), controller.rand_leonflix_comment()))
