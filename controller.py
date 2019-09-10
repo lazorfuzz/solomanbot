@@ -44,7 +44,7 @@ def rand_intro():
   Returns:
       str -- Intro message
   """
-  intros = ['*pops out of a trash can*', '*walks out behind a car*', '*sets down silver play button*', '*calls in from florida penitentiary*', '*turns off lawn mower*', '*snorts line of PCP*', '*dabs*', '*snorts line of adderall*', '*sits behind table*']
+  intros = ['*pops out of a trash can*', '*walks out behind a car*', '*sets down silver play button*', '*calls in from florida penitentiary*', '*turns off lawn mower*', '*dabs*', '*sits behind table*']
   return random.choice(intros)
 
 def rand_leonflix_comment():
