@@ -7,6 +7,11 @@ client = discord.Client()
 
 @client.event
 async def on_message(message):
+  """Async event handler for receiving messages
+  
+  Arguments:
+      message {discord.Message} -- An instance of a Message class
+  """
   if message.author == client.user:
     return
   print(message.content)
@@ -19,13 +24,11 @@ async def on_message(message):
     await message.channel.send(content="Hello I hope everybody is doing great", file=discord.File(fp=buffer, filename='meme.png'))
   elif 'leonflix' in message.content.lower():
     await message.channel.send('%s\n%s' % (controller.rand_intro(), controller.rand_leonflix_comment()))
-  '''elif imdb_match:
-    info = await controller.fetch_imdb(imdb_match.group())
-    await message.channel.send(info)'''
     
-
 @client.event
 async def on_ready():
+  """Async event handler for when the client is logged in
+  """
   print('Logged in as')
   print(client.user.name)
   print(client.user.id)
