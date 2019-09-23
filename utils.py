@@ -65,6 +65,6 @@ def has_hello(msg):
   Returns:
       bool -- Whether or not a greeting was detected in the message
   """
-  hellos = ['hi ', 'hello ', 'good morning ', 'hey ']
+  hellos = ['hi ', 'hello ', 'good morning ', 'hey ', 'sup ']
   there = list(filter(lambda h: msg.lower().startswith(h), hellos))
   return len(there) > 0

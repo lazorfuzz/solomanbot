@@ -1,9 +1,13 @@
 import discord
 import re
 import secrets
-import controller
+import utils
+import message_handlers
+
 
 client = discord.Client()
+message_handlers.client = client
+parsers = message_handlers.parsers
 
 @client.event
 async def on_message(message):
@@ -15,16 +19,11 @@ async def on_message(message):
   if message.author == client.user:
     return
   print(message.content)
-  # imdb_match = re.search('^tt(.{6})', message.content)
-  if '<@%s' % client.user.id in message.content and controller.has_hello(message.content):
-    msg = 'Hello {.author}!'.format(message)
-    await message.channel.send(msg)
-  elif '!meme' in message.content:
-    buffer = await controller.fetch_meme()
-    await message.channel.send(content="Hello I hope everybody is doing great", file=discord.File(fp=buffer, filename='meme.png'))
-  elif 'leonflix' in message.content.lower():
-    await message.channel.send('%s\n%s' % (controller.rand_intro(), controller.rand_leonflix_comment()))
-    
+  for parse_message in parsers:
+    status = await parse_message(message)
+    if status:
+      break
+
 @client.event
 async def on_ready():
   """Async event handler for when the client is logged in

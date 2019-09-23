@@ -1,4 +1,4 @@
-# controller
+# utils
 
 ## fetch_meme
 ```python
@@ -57,7 +57,7 @@ Returns:
 ```python
 TestControllers(self, methodName='runTest')
 ```
-Tests the bot controller methods in controller.py
+Tests the bot utils methods in utils.py
 
 ### test_fetch_meme
 ```python

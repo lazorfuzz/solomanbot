@@ -1,5 +1,5 @@
 import unittest
-import controller
+import utils
 import asyncio
 
 def _run_async(coroutine):
@@ -14,16 +14,16 @@ def _run_async(coroutine):
   return asyncio.get_event_loop().run_until_complete(coroutine)
 
 class TestControllers(unittest.TestCase):
-  """Tests the bot controller methods in controller.py
+  """Tests the bot utils methods in utils.py
   """
   def setUp(self):
-    self.intro = controller.rand_intro()
-    self.comment = controller.rand_leonflix_comment()
+    self.intro = utils.rand_intro()
+    self.comment = utils.rand_leonflix_comment()
   
   def test_fetch_meme(self):
     """Tests that the fetched meme has a getvalue method and returns a value len > 10
     """
-    self.assertGreater(len(_run_async(controller.fetch_meme()).getvalue()), 10)
+    self.assertGreater(len(_run_async(utils.fetch_meme()).getvalue()), 10)
   
   def test_rand_intro(self):
     """Tests that the intro string is not empty
