@@ -12,7 +12,7 @@ async def greeting(message):
   return False
 
 async def meme(message):
-  if message.ontent == '!meme':
+  if message.content == '!meme':
     buffer = await utils.fetch_meme()
     await message.channel.send(content="Hello I hope everybody is doing great", file=discord.File(fp=buffer, filename='meme.png'))
     return True
