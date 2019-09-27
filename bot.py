@@ -12,9 +12,6 @@ parsers = message_handlers.parsers
 @client.event
 async def on_message(message):
   """Async event handler for receiving messages
-  
-  Arguments:
-      message {discord.Message} -- An instance of a Message class
   """
   if message.author == client.user:
     return
