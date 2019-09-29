@@ -6,7 +6,7 @@ client = None
 
 async def greeting(message):
   if '<@%s' % client.user.id in message.content and utils.has_hello(message.content):
-    msg = 'Hello {.author}!'.format(message)
+    msg = 'Hello %s!\n%s' % (message.author, utils.get_hello())
     await message.channel.send(msg)
     return True
   return False
