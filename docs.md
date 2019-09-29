@@ -30,9 +30,9 @@ Returns a random bot intro
 Returns:
     str -- Intro message
 
-## rand_leonflix_comment
+## rand_lf_comment
 ```python
-rand_leonflix_comment()
+rand_lf_comment()
 ```
 Returns a random leonflix compliment
 
@@ -76,4 +76,42 @@ Tests that the intro string is not empty
 TestControllers.test_rand_comment(self)
 ```
 Tests that the comment string is not empty
+
+# message_handlers
+
+## greeting
+```python
+greeting(message)
+```
+Generate a greeting message
+
+Arguments:
+    message {discord.Message} -- Message
+
+Returns:
+    bool -- Whether or not the message was handled
+
+## meme
+```python
+meme(message)
+```
+Generate a meme message
+
+Arguments:
+    message {discord.Message} -- Message
+
+Returns:
+    bool -- Whether or not the message was handled
+
+## lf
+```python
+lf(message)
+```
+Generate a LF compliment
+
+Arguments:
+    message {discord.Message} -- Message
+
+Returns:
+    bool -- Whether or not the message was handled
 

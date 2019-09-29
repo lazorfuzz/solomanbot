@@ -18,7 +18,7 @@ class TestControllers(unittest.TestCase):
   """
   def setUp(self):
     self.intro = utils.rand_intro()
-    self.comment = utils.rand_leonflix_comment()
+    self.comment = utils.rand_lf_comment()
   
   def test_fetch_meme(self):
     """Tests that the fetched meme has a getvalue method and returns a value len > 10

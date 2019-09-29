@@ -47,7 +47,7 @@ def rand_intro():
   intros = ['*pops out of a trash can*', '*walks out behind a car*', '*sets down silver play button*', '*calls in from florida penitentiary*', '*turns off lawn mower*', '*dabs*', '*sits behind table*']
   return random.choice(intros)
 
-def rand_leonflix_comment():
+def rand_lf_comment():
   """Returns a random leonflix compliment
   
   Returns:
