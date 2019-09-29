@@ -68,8 +68,3 @@ def has_hello(msg):
   hellos = ['hi ', 'hello ', 'good morning ', 'hey ', 'sup ']
   there = list(filter(lambda h: msg.lower().startswith(h), hellos))
   return len(there) > 0
-
-def get_hello():
-  """Returns a random greeting
-  """
-  return ':soloman_0_0::soloman_1_0::soloman_2_0::soloman_3_0:\n:soloman_0_1::soloman_1_1::soloman_2_1::soloman_3_1:\n:soloman_0_2::soloman_1_2::soloman_2_2::soloman_3_2:\n:soloman_0_3::soloman_1_3::soloman_2_3::soloman_3_3:'
