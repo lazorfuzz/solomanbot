@@ -72,8 +72,4 @@ def has_hello(msg):
 def get_hello():
   """Returns a random greeting
   """
-  return ''':soloman_0_0::soloman_1_0::soloman_2_0::soloman_3_0:
-:soloman_0_1::soloman_1_1::soloman_2_1::soloman_3_1:
-:soloman_0_2::soloman_1_2::soloman_2_2::soloman_3_2:
-:soloman_0_3::soloman_1_3::soloman_2_3::soloman_3_3:
-'''
+  return ':soloman_0_0::soloman_1_0::soloman_2_0::soloman_3_0:\n:soloman_0_1::soloman_1_1::soloman_2_1::soloman_3_1:\n:soloman_0_2::soloman_1_2::soloman_2_2::soloman_3_2:\n:soloman_0_3::soloman_1_3::soloman_2_3::soloman_3_3:'
