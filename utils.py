@@ -2,6 +2,7 @@ import aiohttp
 from io import BytesIO
 from bs4 import BeautifulSoup
 import random
+import secrets
 
 
 async def fetch_meme():
@@ -10,7 +11,7 @@ async def fetch_meme():
   Returns:
       Buffer -- The meme image bytes
   """
-  url = 'https://leonflix.pythonanywhere.com/memes/random'
+  url = secrets.MEME_ENDPOINT
   async with aiohttp.ClientSession() as session:
     async with session.get(url) as resp:
       meme_data = await resp.json()
