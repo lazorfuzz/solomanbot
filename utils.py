@@ -54,7 +54,7 @@ def rand_lf_comment():
   Returns:
       str -- Random compliment
   """
-  comments = ['This app may be the Kodi killer', 'Sorry Kodi, I\'m using this instead', 'Kodi\'s competition is finally here', 'Who needs Exodus when you have Leonflix', 'This app will revolutionize streaming']
+  comments = ['This app may be the Kodi killer', 'Sorry Kodi, I\'m using this instead', 'Kodi\'s competition is finally here', 'Who needs Exodus when you have %s' % secrets.APP_NAME, 'This app will revolutionize streaming']
   return random.choice(comments)
 
 def has_hello(msg):

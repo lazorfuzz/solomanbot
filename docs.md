@@ -34,7 +34,7 @@ Returns:
 ```python
 rand_lf_comment()
 ```
-Returns a random leonflix compliment
+Returns a random LF compliment
 
 Returns:
     str -- Random compliment

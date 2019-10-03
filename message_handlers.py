@@ -1,5 +1,6 @@
 import utils
 import discord
+from secrets import APP_NAME
 
 
 client = None
@@ -43,7 +44,7 @@ async def lf(message):
   Returns:
       bool -- Whether or not the message was handled
   """
-  if 'leonflix' in message.content.lower():
+  if APP_NAME in message.content.lower():
     await message.channel.send('%s\n%s' % (utils.rand_intro(), utils.rand_lf_comment()))
     return True
   return False
