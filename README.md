@@ -23,7 +23,7 @@ Can be found <a href="docs.md">here</a>.
 
 To update docs.md, install pydocmd and run the gendocs script
 ```
-pip install pydoc-markdown
+pip3 install pydoc-markdown
 ./gendocs
 ```
 
