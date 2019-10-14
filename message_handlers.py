@@ -1,9 +1,10 @@
 import utils
 import discord
-from secrets import APP_NAME
+import os
 
 
 client = None
+APP_NAME = os.environ.get('APP_NAME')
 
 async def greeting(message):
   """Generate a greeting message

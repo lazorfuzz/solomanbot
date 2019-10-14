@@ -1,6 +1,6 @@
 import discord
 import re
-import secrets
+import os
 import utils
 import message_handlers
 
@@ -30,4 +30,4 @@ async def on_ready():
   print(client.user.id)
   print('------')
 
-client.run(secrets.TOKEN)
+client.run(os.environ.get('TOKEN'))
