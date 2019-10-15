@@ -4,7 +4,7 @@ import os
 
 
 client = None
-APP_NAME = os.environ.get('APP_NAME')
+APP_NAME = os.getenv('APP_NAME')
 
 async def greeting(message):
   """Generate a greeting message

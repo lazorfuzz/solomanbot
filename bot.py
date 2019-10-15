@@ -3,8 +3,10 @@ import re
 import os
 import utils
 import message_handlers
+from dotenv import load_dotenv
 
 
+load_dotenv()
 client = discord.Client()
 message_handlers.client = client
 parsers = message_handlers.parsers
@@ -30,4 +32,4 @@ async def on_ready():
   print(client.user.id)
   print('------')
 
-client.run(os.environ.get('TOKEN'))
+client.run(os.getenv('TOKEN'))

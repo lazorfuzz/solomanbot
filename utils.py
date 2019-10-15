@@ -11,7 +11,7 @@ async def fetch_meme():
   Returns:
       Buffer -- The meme image bytes
   """
-  url = os.environ.get('MEME_ENDPOINT')
+  url = os.getenv('MEME_ENDPOINT')
   async with aiohttp.ClientSession() as session:
     async with session.get(url) as resp:
       meme_data = await resp.json()
@@ -54,7 +54,7 @@ def rand_lf_comment():
   Returns:
       str -- Random compliment
   """
-  comments = ['This app may be the Kodi killer', 'Sorry Kodi, I\'m using this instead', 'Kodi\'s competition is finally here', 'Who needs Exodus when you have %s' % os.environ.get('APP_NAME'), 'This app will revolutionize streaming']
+  comments = ['This app may be the Kodi killer', 'Sorry Kodi, I\'m using this instead', 'Kodi\'s competition is finally here', 'Who needs Exodus when you have %s' % os.getenv('APP_NAME'), 'This app will revolutionize streaming']
   return random.choice(comments)
 
 def has_hello(msg):

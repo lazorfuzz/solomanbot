@@ -1,6 +1,10 @@
 import unittest
 import utils
 import asyncio
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 def _run_async(coroutine):
   """Helper method for running async methods
