@@ -5,7 +5,7 @@
 Built with asyncio. The bot currently only dispenses memes and says hi, but more functionality is planned. This is a learning project to gain familiarity with Python 3's async/await syntax and to do IO asynchronously like in Node.js.
 
 ## Getting Started
-Install requirements and run the bot
+Rename `.env.example` to `.env` and edit the environment variables. Then, install the requirements and run the bot
 ```
 pip3 install -r requirements.txt
 python3 bot.py
@@ -14,13 +14,6 @@ python3 bot.py
 ## Running Tests
 ```
 python3 tests.py
-```
-
-## Environment Variables
-```
-TOKEN='SECRET_HERE'
-MEME_ENDPOINT='MEME_ENDPOINT'
-APP_NAME='APP_NAME'
 ```
 
 ## Docs
